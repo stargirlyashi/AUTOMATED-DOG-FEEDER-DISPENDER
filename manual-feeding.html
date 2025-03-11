@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feeder System - Manual Feeding</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>🐕 Automated Dog Feeder</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Dog House</a></li>
+                <li><a href="feeding-schedule.html">Feeding Schedule</a></li>
+                <li><a href="manual-feeding.html">Manual Feeding</a></li>
+                <li><a href="monitoring.html">Paw Watch</a></li>
+                <li><a href="system-power.html">Nap Mode</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="manual-feeding">
+        <section class="treat-time">
+            <h2>Treat Time</h2>
+            <div class="button-container">
+                <button onclick="manualFeeding()">Feed Now</button>
+            </div>
+            <h3>Feeding History</h3>
+            <ul id="feeding-history"></ul>
+            <p id="confirmation-message"></p>
+        </section>
+    </main>
+    <script src="js/scripts.js"></script>
+
+</body>
+</html>
