@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>🐕 Automated Dog Feeder</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Dog House</a></li>
+                <li><a href="feeding-schedule.html">Feeding Schedule</a></li>
+                <li><a href="manual-feeding.html">Manual Feeding</a></li>
+                <li><a href="monitoring.html">Paw Watch</a></li>
+                <li><a href="system-power.html">Nap Mode</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="system-power">
+        <section>
+            <h2>System Power</h2>
+            <button id="power-off-button" onclick="powerOffSystem()">Power Off</button>
+            <button id="power-on-button" onclick="powerOnSystem()" style="display:none;">Power On</button>
+            <p id="power-status">System is currently on.</p>
+        </section>
+    </main>
+    <script src="js/scripts.js"></script>
+
+</body>
+</html>
