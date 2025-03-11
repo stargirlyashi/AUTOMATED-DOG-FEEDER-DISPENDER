@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐕 Automated Dog Feeder</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .meal-time, .treat-time {
+            width: 45%;
+            display: inline-block; 
+            vertical-align: top; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🐕 Automated Dog Feeder</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Dog House</a></li>
+                <li><a href="feeding-schedule.html">Feeding Schedule</a></li>
+                <li><a href="manual-feeding.html">Manual Feeding</a></li>
+                <li><a href="monitoring.html">Paw Watch</a></li>
+                <li><a href="system-power.html">Nap Mode</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="home">
+        <section>
+            <h2>System Status</h2>
+            <div class="status-container">
+                <div class="status-item">
+                    <span class="status-icon">🐶</span>
+                    <p>Status: <span id="system-status">Loading...</span></p>
+                </div>
+                <div class="status-item">
+                    <span class="status-icon">⏰</span>
+                    <p>Last Feeding Time: <span id="last-feeding">N/A</span></p>
+                </div>
+                <div class="status-item">
+                    <span class="status-icon">⏰</span>
+                    <p>Next Feeding Time: <span id="next-feeding">Not scheduled</span></p>
+                </div>
+            </div>
+        </section>
+        <div class="feeding-container" style="display: flex; justify-content: space-between;">
+            <section id="feeding-schedule" class="meal-time">
+                <h2>Scheduled Feeding Time</h2>
+                <div class="schedule-container">
+                    <label for="scheduled-time">Set Scheduled Feeding Time:</label>
+                    <select id="scheduled-time">
+                        <optgroup label="Morning">
+                            <option value="06:00">06:00 AM</option>
+                            <option value="07:00">07:00 AM</option>
+                            <option value="08:00">08:00 AM</option>
+                            <option value="09:00">09:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                        </optgroup>
+                        <optgroup label="Afternoon">
+                            <option value="12:00">12:00 PM</option>
+                            <option value="13:00">01:00 PM</option>
+                            <option value="14:00">02:00 PM</option>
+                            <option value="15:00">03:00 PM</option>
+                            <option value="16:00">04:00 PM</option>
+                            <option value="17:00">05:00 PM</option>
+                        </optgroup>
+                        <optgroup label="Night">
+                            <option value="18:00">06:00 PM</option>
+                            <option value="19:00">07:00 PM</option>
+                            <option value="20:00">08:00 PM</option>
+                            <option value="21:00">09:00 PM</option>
+                            <option value="22:00">10:00 PM</option>
+                            <option value="23:00">11:00 PM</option>
+                        </optgroup>
+                    </select>
+
+                    <div class="button-container">
+                        <button onclick="setScheduledFeeding()">Set Schedule</button>
+                    </div>
+                    <h3>Current Schedule</h3>
+                    <ul id="current-schedule"></ul>
+                </div>
+            </section>
+            <section id="manual-feeding" class="treat-time">
+                <h2>Manual Feeding</h2>
+                <div class="button-container">
+                    <button onclick="manualFeeding()">Dispense Now</button>
+                </div>
+                <h3>Feeding History</h3>
+                <ul id="feeding-history"></ul>
+                <p id="confirmation-message"></p>
+            </section>
+        </div>
+        <section id="system-power">
+            <h2>System Power</h2>
+            <button id="power-off-button" onclick="powerOffSystem()">Power Off</button>
+            <button id="power-on-button" onclick="powerOnSystem()" style="display:none;">Power On</button>
+            <p id="power-status">System is currently on</p>
+        </section>
+    </main>
+    <div class="paw-container">
+        <div class="paw"></div>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
