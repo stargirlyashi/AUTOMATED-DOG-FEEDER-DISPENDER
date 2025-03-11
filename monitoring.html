@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feeder System - Monitoring</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>🐕 Automated Dog Feeder</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Dog House</a></li>
+                <li><a href="feeding-schedule.html">Feeding Schedule</a></li>
+                <li><a href="manual-feeding.html">Manual Feeding</a></li>
+                <li><a href="monitoring.html">Paw Watch</a></li>
+                <li><a href="system-power.html">Nap Mode</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="monitoring">
+        <section class="system-status">
+            <h2>System Monitor</h2>
+            <div class="status-container">
+                <p><strong>System Status:</strong> <span id="system-status">Inactive</span></p>
+                <p><strong>Last Motion Detected:</strong> <span id="last-motion">No motion detected yet</span></p>
+                <p><strong>Last Feeding:</strong> <span id="last-feeding">N/A</span></p>
+                <p><strong>Next Feeding:</strong> <span id="next-feeding">Not scheduled</span></p>
+            </div>
+        </section>
+        <section class="activity-log">
+            <h3>Activity Log</h3>
+            <ul id="activity-log">
+                <li>No activity recorded</li>
+            </ul>
+        </section>
+        <section class="feeding-schedule">
+            <h3>Current Feeding Schedule</h3>
+            <ul id="current-schedule">
+                <li>No schedule set</li>
+            </ul>
+        </section>
+    </main>
+    <script src="js/scripts.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            loadSystemStatus();
+            loadActivityLog();
+            loadCurrentSchedule();
+            updateNextFeeding();
+        });
+    </script>
+</body>
+</html>
